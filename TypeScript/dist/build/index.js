@@ -35,32 +35,12 @@ function listAll(spaceships) {
     });
 }
 ;
-const ship = {
-    name: "La Nave Russa!",
-    pilot: "Daniel Falcão",
-    crew: [],
-    crewLimit: 10
-};
-createSpaceship(ship);
-alert(spaceships);
-console.log(spaceships);
-insertMember("Daniel Sheik", ship);
-insertMember("Danilo Sheik", ship);
-insertMember("Danila", ship);
-insertMember("Daniela Sheik", ship);
-sendSpaceship(spaceships[0]);
-const anotherShip = {
-    name: "La Nave Russa!",
-    pilot: "Daniel Falcão",
-    crew: [],
-    crewLimit: 10
-};
-createSpaceship(anotherShip);
-alert(spaceships);
-console.log(spaceships);
-insertMember("Daniel Sheik", anotherShip);
-insertMember("Danilo Sheik", anotherShip);
-insertMember("Danila", anotherShip);
-insertMember("Daniela Sheik", anotherShip);
-sendSpaceship(spaceships[1]);
-listAll(spaceships);
+function handleCreation(evt) {
+    evt.preventDefault();
+    const shipName = document.querySelector("#shipname");
+    const pilot = document.querySelector("#pilot");
+    const crewLimit = document.querySelector("#crews");
+    const inMiss = document.querySelector("#inMission").checked;
+    console.log(inMiss.checked);
+}
+;
