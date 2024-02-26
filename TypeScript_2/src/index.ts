@@ -1,4 +1,4 @@
-type options = "Yes" | "No" | true | false;
+/* type options = "Yes" | "No" | true | false;
 
 let userOptions: options;
 
@@ -56,3 +56,14 @@ const planetinha = {
 planetSaving(planetinha);
 updateSituation(planets,{name:"planetasso",situacao:"habitável"})
 console.log(planets);
+ */
+
+async function fetchData(){
+    const fetchGit = await fetch("http://api.github.com/users/danielfalcaovt");
+    const data = await fetchGit.json();
+        await Promise.all([fetchGit,data]).then((values)=>{
+            console.log(values[1]);    
+        })
+};
+
+fetchData()
