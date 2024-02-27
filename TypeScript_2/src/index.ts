@@ -58,12 +58,32 @@ updateSituation(planets,{name:"planetasso",situacao:"habitável"})
 console.log(planets);
  */
 
+import man from "./export";
+import * as _ from "lodash";
+/* 
 async function fetchData(){
     const fetchGit = await fetch("http://api.github.com/users/danielfalcaovt");
     const data = await fetchGit.json();
         await Promise.all([fetchGit,data]).then((values)=>{
-            console.log(values[1]);    
-        })
+            return values[1];
+        });
 };
 
-fetchData()
+interface HomoSapiens extends man{
+    end?:`Always the end`
+}
+
+type X = {
+    favoriteSong:'Dancing in the dark',
+    dream:'be rich.'
+};
+
+fetchData();
+
+//omit e pick
+
+
+type localGit = Pick<X,'favoriteSong'>;
+ */
+
+_.capitalize('fuck you');
